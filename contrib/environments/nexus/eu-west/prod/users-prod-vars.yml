@@ -1,0 +1,34 @@
+---
+env: prod
+datacenter: eu-west
+user_management:
+  - name: donovan
+    shell: /bin/bash
+    groups:
+      - sudo
+    ssh_keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDVYZCD5TQaG40GcsS6ysKhqlS5aX3YrO29c/t3MdDYA82gqex6CQvxkvhKsY8JzMB3EFfUBhcp85U68phDCigizxv1DD0UVrLEyAORqI/uktQMj14peeNmHaHdCy2BgHCr3ywh9IewzYO9YAwZ3yrL0Ubi14CG73h4SBlhnSx4M3L/HHvUcvXno7aFjdYl5Ma4ZW+LOScZ1ZAFC8Aa3vsIbkmbPHzfHeoVuVv2+eRGfPUThbuXu1U8eKiGwxuAH1Ybfx2u8pUSFdhLtOQxz4IeSX+tA06lhxn1bBL/OjMyEXvIJecJOqRIBJEKCRdmZsJeiRFnid06GMLteXcyZu1 donovan@donovan-HP-ProBook-650-G1"
+  - name: root
+    shell: /bin/bash
+    groups:
+      - sudo
+    ssh_keys:
+    - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXZrPFiRXAZc8GxQnCDK25yy9iV0/JF9mlStJRPO6xKEbR5lQClIPDtixZv19YdvVA9v9DvTnd6REQF6bqBjjGGkEbNWKTEyE4nO6Pq8czG6/lspGPbwwVz3ggFx+inoBTmsAkrZuISImrAydUNbfuUEaL4L40miCOax+XkDFl5vfytkZNmBImqqvrVLdtwkgbmQSOwrYGS6jxFGNY2hgyxn2fGtXrbjRGD+m9ISV6vOSbyyGsXkbPZWIEHrUNZcRDt3zN9E25wk6+7iket+C2W1dKMI9CDb5jXVdYcY0FD7pHZMxLtgy3qevMan1TT18NFivZvAZwH42vBwASDJDX root@admin"
+  - name: andrew
+    shell: /bin/bash
+    groups:
+     - sudo
+    ssh_keys:
+    - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDXj8GAPEp8Iod7C3UFBGiczT9YmEiYFDVXtPfQzUT3s90Db0/srALzqlnkMR65cC/PCqbwj54d5Ly05chEThj3njYiDzen5XmZHZ93YPHfN9XEeTlkCkErAGnc0uImctMN5Zih2RX1BahoZdIyBBjnxDAr36HEJl1vwnF6yvQrzd4IF73XwcWKeSTofgYWdwEuDWdeGWY3w+97LjwMndV0RmaqWAWSELoEvnSST/twHiO5FF8LkEdeyib07DeMva7tNqmfsYi4pJpjexVghb14tsP5dYGuX2Q2umvd9K7T7sIGwdo2xb3SNXQXixiVmWEbTRK5uuc6Otn7QsvwGLEK6bSmACTbBoKy1g7TIEfY+rzsc0sEjhdoNvf8rYLqHSuANJiRhTgX8wePwPiLCMWDFcNQ3vrUCd3fp+Wb3xfXknQo2quiV3w50Ht1/jyrhvl/Scmbyvu5FIG4ixC7KVYgD57PMDWwmakEPdcFe5U92zYDIYFHbawZjODkZp//dVPHG3DlJDQkr1um877VjUlKCvbSDz/M6SKAmhmw3Q5nIXZeG0c2CP5WO13fgxMTi6kXtZuo0Io8dzN7rXDzCG8RuDxmtHjE8B1EQ/8c8eXeBLg20CKuRcvo2noEV4ejKB2udb9xuI3Akd/3uGcnrvVaJV9xQI9Va5Jsi7GPsNGi9w== Andrew@AndrewKlopper"
+  - name: kaveer
+    shell: /bin/bash
+    groups:
+      - sudo
+    ssh_keys:
+    - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDaeVVaRg2xO2kggz/V1q85LZriPnqwpgAiQ0fKcObF3EoRAun/RWGsVOpM4vsYJxswph72gvbYBm3t00myLY5kbSnoLIYQoQVT2QN+FphZjprHIJ/OdGLcXFiIqIOhCnDHv7R0vG7YokzLD645OTNwcm8o3cAto4gIhzdD/PXQBcZu7p6J0V6aT8W2mWOwG6TmO9vLwy+cwxYqJWdVqo7FFoqBmormk0eP1WW0vcCxkoDhJTkjeQ3qzVae04ByNvEALAG2lVk+ohu6SS6hBRlJHbAiwDKxiVJQYOLBk5o7YRuJSaoHuZct9OlALiJRuUI9lHkw+YyH76r0pHaiLu0h kaveerh@kaveers-MacBook-Pro.local"
+  - name: neven
+    shell: /bin/bash
+    groups:
+      - sudo
+    ssh_keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAgEA2+jPMCm3kICQo8GYApy8WtmU72WggCM8oW0cpYVGwT05Z9REwIS+Fz6iYsX4SaVgIoMWV7hnx6VcUgsTUzuOuKGuvBhDgaSAMWj9Xrjj9kS0Yscx/b7THGV+anFy+39/5sZzX51q0Oc3zmdd+hzW3/EMZ+aWANRuFhi/WAYwAVT39hnTAO6BIuhAbnwE0YsvE/F5aoo/TD2xe7uP0E88WPpQMnMmwYVmtorhhh7+4bSFQjenmHSQJjYGiCxYmEf8DpS9iqvw34AUpOzY1PIZVuk4uGI45K3FLlfsAYnIlo/8o2un8kFj/aJ63/fkqx24tDDDy7xAKJ0zGIU3Oie45Yx6J3Fl6TehpYxu8tMfB4p0U6LOSf8WTf4YzaEMrsMd7UP/UJ/A7OoyQ9o6AyWHZZ5NEQvxtY8Q/0Ln8JFSXBl7/Hv9ID9gOJJj/rK4F53IYNDUWV3PSOScppVKctifFB26jHboEm0dUpjeuVQ9Uuxe1E9YIveKUiGYH3ju9uoq3QoclQPelRQ0fJOf+SrLRtjWv3p//YWRE7gPkl3YX/bJJgIujxrQ55bXvkgkUQf6B6jnlazhVPw113onJywdvI235BN9TJo9s5AsXlFYOeHs+Y+QuoJIABRfvjl5bBez52zf/kQVlhim6at+ILW+Gk/SskdW2ERN1oytSI7BvTk= nevenm@fanmode.com"

@@ -1,0 +1,19 @@
+---
+env: prod
+datacenter: eu-west
+apache_create_vhosts: true
+apache_mods_enabled: ["proxy_http.load", "headers.load"]
+apache_remove_default_vhost: true
+apache_vhosts:
+  - servername: "repo.fanmode.com"
+    extra_parameters:
+      Redirect permanent / https://repo.fanmode.com/
+apache_vhosts_ssl:
+  - servername: "repo.fanmode.com"
+    certificate_file: "/etc/letsencrypt/live/repo.fanmode.com/cert.pem"
+    certificate_key_file: "/etc/letsencrypt/live/repo.fanmode.com/privkey.pem"
+    certificate_chain_file: "/etc/letsencrypt/live/repo.fanmode.com/chain.pem"
+    extra_parameters_nodecode: 'AllowEncodedSlashes NoDecode'
+    extra_parameters: 'ProxyPass /  http://127.0.0.1:8081/ nocanon'
+    extra_parameters_reverse: 'ProxyPassReverse /  http://127.0.0.1:8081/'
+    extra_parameters_requestheader: 'RequestHeader set X-Forwarded-Proto "https"'

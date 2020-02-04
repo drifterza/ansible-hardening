@@ -1,0 +1,28 @@
+---
+- name: configure registry
+  hosts: registry
+  become: true
+  pre_tasks:
+    - name: Set hostname
+      command: hostnamectl set-hostname registry.fanmode.com
+      register: set_hostname
+    - name: Install basic packages
+      apt:
+        name: "{{ item }}"
+        state: latest
+      loop:
+        - rsync
+        - aptitude
+        - parted
+        - xfsprogs
+        - ufw
+        - lvm2
+  roles:
+    - { role: security }
+    - { role: secure_openssh_server }
+    - { role: user_management }
+    - { role: postfix }
+    - { role: apache }
+    - { role: certbot }
+    - { role: java8 }
+    - { role: nexus }

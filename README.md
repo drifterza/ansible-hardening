@@ -32,6 +32,8 @@ The following environment variables needs to be set for the provisioning;
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
 ANSIBLE_SSH_USER
+LINODE_API_KEY
+ROOT_PASSWORD
 ```
 
 ## Solution Terraform Variables
@@ -50,7 +52,8 @@ Additionally, we're storing state into the etcd cluster and in order to do so, w
 export TF_VAR_S3_ACCESS_KEY=AWS_ACCESS_KEY_ID
 export TF_VAR_S3_SECRET_KEY=AWS_SECRET_ACCESS_KEY
 export TF_VAR_ANSIBLE_SSH_USER=ANSIBLE_SSH_USER
-
+export TF_VAR_LINODE_API_KEY=LINODE_API_KEY
+export TF_VARS_ROOT_PASSWORD=ROOT_PASSWORD
 ```
 
 The code caters for both staging and production environments. You need to ensure you pass in the correct environment, project name and region which you want to build.
