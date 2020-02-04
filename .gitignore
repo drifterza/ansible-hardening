@@ -1,3 +1,5 @@
 infra-terraform/.terraform*
 infra-terraform/terraform.tfstate.d*
 contrib/playbooks/roles/*
+.terraform.tfstate.lock.info
+*test/
