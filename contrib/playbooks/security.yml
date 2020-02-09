@@ -1,0 +1,7 @@
+---
+- name: configure security
+  hosts: registry
+  become: true
+  roles:
+    - { role: security }
+    - { role: secure_openssh_server }

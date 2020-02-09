@@ -1,0 +1,27 @@
+name: Test build
+
+on:
+    push:
+        branches:
+            - master
+            - develop
+    schedule:
+        - cron: '0 4 * * 0'
+
+jobs:
+    build:
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os: [ubuntu-18.04]
+        steps:
+        - uses: actions/checkout@master
+        - name: Create user
+          run: |
+            cd .github
+            ansible-playbook --connection=local -e 'ansible_python_interpreter=/usr/bin/python3' playbook.yml
+        - name: Simple check
+          run: |
+            RESULT=`grep userx /etc/passwd`
+            echo "$RESULT"
+            if [ -z "$RESULT" ]; then echo "ERROR: User was not created."; exit 1 ;fi

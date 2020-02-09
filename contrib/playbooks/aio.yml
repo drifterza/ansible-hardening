@@ -1,11 +1,16 @@
 ---
-- name: configure registry
+- name: configure all
   hosts: registry
   become: true
   pre_tasks:
     - name: Set hostname
       command: hostnamectl set-hostname registry.fanmode.com
       register: set_hostname
+    - name: adding repo for java8
+      apt_repository:
+        repo:  deb http://ftp.us.debian.org/debian sid main
+        state: present
+        filename: java8
     - name: Install basic packages
       apt:
         name: "{{ item }}"
@@ -17,6 +22,7 @@
         - xfsprogs
         - ufw
         - lvm2
+        - openjdk-8-jdk
   roles:
     - { role: security }
     - { role: secure_openssh_server }
@@ -24,5 +30,4 @@
     - { role: postfix }
     - { role: apache }
     - { role: certbot }
-    - { role: java8 }
     - { role: nexus }

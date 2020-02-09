@@ -1,0 +1,6 @@
+---
+- name: configuring users
+  hosts: registry
+  become: true
+  roles:
+    - { role: user_management }

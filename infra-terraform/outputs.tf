@@ -5,5 +5,5 @@
 #
 
 output "linode_provision_ip_address" {
-  value = "${linode_instance.instance.0.ip_address}"
+  value = "${linode_instance.registry.*.ip_address}"
 }

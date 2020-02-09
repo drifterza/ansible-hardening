@@ -1,0 +1,6 @@
+---
+- name: configure certbot
+  hosts: registry
+  become: true
+  roles:
+    - { role: certbot }

@@ -3,3 +3,4 @@ infra-terraform/terraform.tfstate.d*
 contrib/playbooks/roles/*
 .terraform.tfstate.lock.info
 *test/
+contrib/environments/nexus/uk/prod/prod.secret.tfvars

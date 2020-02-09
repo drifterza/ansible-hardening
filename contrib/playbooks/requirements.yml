@@ -12,13 +12,13 @@
   version: 2.0.0
   name: postfix
 - src: https://github.com/drifterza/ansible-role-apache
-  version: 3.1.0
+  version: 3.1.1
   name: apache
 - src: https://github.com/drifterza/ansible-role-certbot
   version: 3.0.3
   name: certbot
 - src: https://github.com/drifterza/ansible-role-secure-openssh-server
-  version: v1.0.2
+  version: v1.0.3
   name: secure_openssh_server
 - src: https://github.com/drifterza/ansible-user_management
   version: 1.1.1
@@ -26,6 +26,3 @@
 - src: https://github.com/drifterza/ansible-lvm
   version: master
   name: lvm
-- src: https://github.com/drifterza/ansible-oracle-java8
-  version: master
-  name: java8

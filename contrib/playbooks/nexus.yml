@@ -1,0 +1,7 @@
+---
+- name: configure nexus
+  hosts: registry
+  become: true
+  pre_tasks:
+  roles:
+    - { role: nexus }

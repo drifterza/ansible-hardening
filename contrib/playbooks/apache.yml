@@ -1,0 +1,6 @@
+---
+- name: configure apache
+  hosts: registry
+  become: true
+  roles:
+    - { role: apache }

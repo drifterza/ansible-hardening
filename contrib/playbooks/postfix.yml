@@ -1,0 +1,6 @@
+---
+- name: configure postfix
+  hosts: registry
+  become: true
+  roles:
+    - { role: postfix }

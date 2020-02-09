@@ -1,0 +1,19 @@
+---
+
+- name: YUM | Install lvm
+  yum: >
+    name={{ item }}
+    state=present
+  with_items:
+    - system-storage-manager
+    - sg3_utils
+    - lvm2
+
+- name: COMMAND | checking for scsi devices
+  command: sg_scan
+  register: scsi_devices
+  changed_when: false
+
+- name: COMMAND | Rescanning for new disks
+  command: /usr/bin/rescan-scsi-bus.sh
+  changed_when: false
